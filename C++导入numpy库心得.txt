@@ -1,0 +1,14 @@
+C++导入numpy库心得
+前两天一直因为导入numpy库出现fatal error,就算将numpy库导入include path一样不顶用。
+解决办法：将numpy库放入工程文件根目录
+C++导入Python库，将Python.h包含至include path中，g++编译采用以下格式：
+g++ Test001.cpp -I /usr/include/python3.6 -L /usr/lib/python3.6/config-3.6m-x86_64-linux-gnu/ -l python3.6 -o Test001
+
+下面是其中一些问题的解决方法：
+//下面这个库是C++和python协同库
+//#include <numpy/arrayobject.h>
+//#include <Python.h>
+//显式调用python  g++ -I /usr/include/python3.6 inputArrayTest.cpp -L /usr/lib/python3.6/config***/ -l python3.6
+//https://www.cnblogs.com/tevic/p/3645197.html
+//https://blog.csdn.net/stu_csdn/article/details/69488385
+//https://numpy.org/doc/stable/reference/c-api/types-and-structures.html?highlight=pyarrayobject#c.PyArrayObject
