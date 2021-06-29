@@ -126,8 +126,8 @@ void parse_python_viterbi_data_opration(){
     void* perm_data=PyArray_DATA(perm_matrix);
     int perm_stride0=PyArray_STRIDE(perm_matrix,0);
     int perm_stride1=PyArray_STRIDE(perm_matrix,1);
-    cout<<"perm_matrix rows:\t"<<perm_rows<<"\t"<<"cols:"<<perm_cols<<endl;
-    cout<<"perm_matrix stride:\t"<<perm_stride0<<"\t"<<perm_stride1<<endl;
+    // cout<<"perm_matrix rows:\t"<<perm_rows<<"\t"<<"cols:"<<perm_cols<<endl;
+    // cout<<"perm_matrix stride:\t"<<perm_stride0<<"\t"<<perm_stride1<<endl;
 
     //alignment_matrix为二c维矩阵
     int alignment_rows=PyArray_DIM(alignment_matrix,0);
@@ -135,8 +135,8 @@ void parse_python_viterbi_data_opration(){
     void* alignment_data=PyArray_DATA(alignment_matrix);
     static int alignment_stride0=PyArray_STRIDE(alignment_matrix,0);
     static int alignment_stride1=PyArray_STRIDE(alignment_matrix,1);
-    cout<<"alignment_matrix rows:\t"<<alignment_rows<<"\t"<<"cols:"<<alignment_cols<<endl;
-    cout<<"alignment_matrix stride:\t"<<alignment_stride0<<"\t"<<alignment_stride1<<endl;
+    // cout<<"alignment_matrix rows:\t"<<alignment_rows<<"\t"<<"cols:"<<alignment_cols<<endl;
+    // cout<<"alignment_matrix stride:\t"<<alignment_stride0<<"\t"<<alignment_stride1<<endl;
 
     //traceback_matrix_rows为二维向量
     int traceback_mr_rows=PyArray_DIM(traceback_matrix_rows,0);
@@ -144,8 +144,8 @@ void parse_python_viterbi_data_opration(){
     void* traceback_mr_data=PyArray_DATA(traceback_matrix_rows);
     int traceback_mr_stride0=PyArray_STRIDE(traceback_matrix_rows,0);
     int traceback_mr_stride1=PyArray_STRIDE(traceback_matrix_rows,1);
-    cout<<"traceback_matrix_rows rows:\t"<<traceback_mr_rows<<"\t"<<"cols:"<<traceback_mr_cols<<endl;
-    cout<<"traceback_matrix_rows stride:\t"<<traceback_mr_stride0<<"\t"<<traceback_mr_stride1<<endl;
+    // cout<<"traceback_matrix_rows rows:\t"<<traceback_mr_rows<<"\t"<<"cols:"<<traceback_mr_cols<<endl;
+    // cout<<"traceback_matrix_rows stride:\t"<<traceback_mr_stride0<<"\t"<<traceback_mr_stride1<<endl;
 
     //traceback_matrix_cols为二维向量
     int traceback_mc_rows=PyArray_DIM(traceback_matrix_cols,0);
@@ -153,15 +153,15 @@ void parse_python_viterbi_data_opration(){
     void* traceback_mc_data=PyArray_DATA(traceback_matrix_cols);
     int traceback_mc_stride0=PyArray_STRIDE(traceback_matrix_cols,0);
     int traceback_mc_stride1=PyArray_STRIDE(traceback_matrix_cols,1);
-    cout<<"traceback_matrix_cols rows:\t"<<traceback_mc_rows<<"\t"<<"cols:"<<traceback_mc_cols<<endl;
-    cout<<"traceback_matrix_cols stride:\t"<<traceback_mr_stride0<<"\t"<<traceback_mc_stride1<<endl;
+    // cout<<"traceback_matrix_cols rows:\t"<<traceback_mc_rows<<"\t"<<"cols:"<<traceback_mc_cols<<endl;
+    // cout<<"traceback_matrix_cols stride:\t"<<traceback_mr_stride0<<"\t"<<traceback_mc_stride1<<endl;
 
     //num_candidate_matches为一维向量
     int num_candidate_matches_cols=PyArray_DIM(num_candidate_matches,0);
     void* num_candidate_matches_data=PyArray_DATA(num_candidate_matches);
     int num_candidate_matches_stride0=PyArray_STRIDE(num_candidate_matches,0);
-    cout<<"num_candidate_matches cols:\t"<<num_candidate_matches_cols<<endl;
-    cout<<"num_candidate_matches stride:\t"<<num_candidate_matches_stride0<<endl;
+    // cout<<"num_candidate_matches cols:\t"<<num_candidate_matches_cols<<endl;
+    // cout<<"num_candidate_matches stride:\t"<<num_candidate_matches_stride0<<endl;
    
 
     //candidate_matches为二维向量 数据类型为BOOL
@@ -170,22 +170,22 @@ void parse_python_viterbi_data_opration(){
     void* candidate_matches_data=PyArray_DATA(candidate_matches);
     int candidate_matches_stride0=PyArray_STRIDE(candidate_matches,0);
     int candidate_matches_stride1=PyArray_STRIDE(candidate_matches,1);
-    cout<<"candidate_matches rows:\t"<<candidate_matches_rows<<"\t"<<"cols:"<<candidate_matches_cols<<endl;
-    cout<<"candidate_matches stride:\t"<<candidate_matches_stride0<<"\t"<<candidate_matches_stride1<<endl;
+    // cout<<"candidate_matches rows:\t"<<candidate_matches_rows<<"\t"<<"cols:"<<candidate_matches_cols<<endl;
+    // cout<<"candidate_matches stride:\t"<<candidate_matches_stride0<<"\t"<<candidate_matches_stride1<<endl;
 
     //p_bad为一维向量
     int p_bad_cols=PyArray_DIM(p_bad,0);
     void* p_bad_data=PyArray_DATA(p_bad);
     int p_bad_stride0=PyArray_STRIDE(p_bad,0);
-    cout<<"p_bad cols:\t"<<p_bad_cols<<endl;
-    cout<<"p_bad stride:\t"<<p_bad_stride0<<endl;
+    // cout<<"p_bad cols:\t"<<p_bad_cols<<endl;
+    // cout<<"p_bad stride:\t"<<p_bad_stride0<<endl;
     
     //p_good为一维向量
     int p_good_cols=PyArray_DIM(p_good,0);
     void* p_good_data=PyArray_DATA(p_good);
     int p_good_stride0=PyArray_STRIDE(p_good,0);
-    cout<<"p_good rows:\t"<<p_good_cols<<endl;
-    cout<<"p_good stride:\t"<<p_good_stride0<<endl;
+    // cout<<"p_good rows:\t"<<p_good_cols<<endl;
+    // cout<<"p_good stride:\t"<<p_good_stride0<<endl;
     
     //p_vals为三维向量
     int p_vals_rows=PyArray_DIM(p_vals,0);
@@ -320,7 +320,7 @@ void parse_python_viterbi_data_opration(){
             }
             
             //tran_perm无问题
-            cout<<"tran_perms:"<<tran_perms[0][0]<<endl;
+            //cout<<"tran_perms:"<<tran_perms[0][0]<<endl;
             //
             int row_n=*(int*)(num_candidate_matches_data+(cl-cfrom-1)*num_candidate_matches_stride0);
             int col_n=*(int*)(num_candidate_matches_data+(cl)*num_candidate_matches_stride0);
@@ -351,7 +351,7 @@ void parse_python_viterbi_data_opration(){
                 // cout<<endl;
             }
             //6.29 p_val_copy无问题
-            cout<<"p_vals_copy:"<<p_vals_copy[0][0]<<endl;
+            //cout<<"p_vals_copy:"<<p_vals_copy[0][0]<<endl;
             //transition_sub_matrix=p_vals_copy.reshape(row_n,coln)
             double** transition_matrix;
             transition_matrix=new double*[row_n];
@@ -383,7 +383,7 @@ void parse_python_viterbi_data_opration(){
                 if(*(bool*)(candidate_matches_data+(cl-cfrom-1)*candidate_matches_stride0+k*candidate_matches_stride1)){
                     //tmp5[index]=*(double*)(alignment_data+(cl-cfrom-1)*alignment_stride0+k*alignment_stride1);
                     tmp5[index]=alignment_matrix_data[cl-cfrom-1][k];
-                    cout<<"tmp:"<<tmp5[index]<<endl;
+                    //cout<<"tmp:"<<tmp5[index]<<endl;
                     
                     index++;
                 }
@@ -412,13 +412,13 @@ void parse_python_viterbi_data_opration(){
                     // cout<<"score:"<<score[i][j]<<endl;
                 }
                 
-                cout<<"transition_matrix[i][col_n-6]:"<<transition_matrix[i][col_n-6]<<"\t tmp:"<<tmp5[i]<<"\t score:"<<score[i][tmp2_sum-6];
-                cout<<endl;
+                //cout<<"transition_matrix[i][col_n-6]:"<<transition_matrix[i][col_n-6]<<"\t tmp:"<<tmp5[i]<<"\t score:"<<score[i][tmp2_sum-6];
+                //cout<<endl;
                 
             }
-            cout<<"next cycle"<<endl;
-            cout<<"transition matrix:"<<transition_matrix[0][0]<<endl;
-            cout<<"score:"<<score[0][0]<<endl;
+            //cout<<"next cycle"<<endl;
+            //cout<<"transition matrix:"<<transition_matrix[0][0]<<endl;
+            //cout<<"score:"<<score[0][0]<<endl;
             //from_score,where_fromm 
             //每列的最大值和最大值列索引
             double* from_score=new double[tmp2_sum];
@@ -453,7 +453,7 @@ void parse_python_viterbi_data_opration(){
                     better_scores[i]=false;
                 }
             }
-            cout<<"from score:"<<from_score[0]<<"\twhere score:"<<where_score[0]<<"\tbetter score:"<<better_scores[0]<<endl;
+            //cout<<"from score:"<<from_score[0]<<"\twhere score:"<<where_score[0]<<"\tbetter score:"<<better_scores[0]<<endl;
             //from_indices
             int* from_indeces=new int[tmp1_sum];
             int index_f=0;
@@ -464,7 +464,7 @@ void parse_python_viterbi_data_opration(){
                     from_indeces[index_f++]=j;
                 }
             }
-            cout<<"from indices:"<<from_indeces[0]<<endl;
+            //cout<<"from indices:"<<from_indeces[0]<<endl;
             //this_row_best_col_from
             //this_row_best_row_from
             //thiw_row_best_scores
@@ -479,7 +479,7 @@ void parse_python_viterbi_data_opration(){
                 }
                 
             }
-            cout<<endl;
+            //cout<<endl;
             
         }
         int index_best=0;
@@ -508,22 +508,83 @@ void parse_python_viterbi_data_opration(){
                 index_best++;
             }  
         }
-        cout<<"alignment data:"<<endl;
+        //cout<<"alignment data:"<<endl;
     }
 
     //返回至python
     //PyObject* topythonFun=PyObject_GetAttrString(pModule,"parse_cpp_return_data");
-     
+    // cout<<"terminal alignment matrix :"<<endl;
+    // for (int i = 0; i < alignment_rows; i++)
+    // {
+    //     /* code */
+    //     for (int j = 0; j < alignment_cols; j++)
+    //     {
+    //         /* code */
+    //         cout<<alignment_matrix_data[i][j]<<"  ";
+    //     }
+    //     cout<<endl;
+        
+    // }
+    // cout<<"terminal traceback_row matrix :"<<endl;
+    // for (int i = 0; i < traceback_mr_rows; i++)
+    // {
+    //     /* code */
+    //     for (int j = 0; j < traceback_mr_cols; j++)
+    //     {
+    //         /* code */
+    //         cout<<traceback_matrix_rows_data[i][j]<<"  ";
+    //     }
+    //     cout<<endl;
+        
+    // }
+    // cout<<"terminal traceback_col matrix :"<<endl;
+    // for (int i = 0; i < traceback_mc_rows; i++)
+    // {
+    //     /* code */
+    //     for (int j = 0; j < traceback_mc_cols; j++)
+    //     {
+    //         /* code */
+    //         cout<<traceback_matrix_cols_data[i][j]<<"  ";
+    //     }
+    //     cout<<endl;
+        
+    // }
+    
     cout<<"输送数据至Python"<<endl;
     //这里添加往python传递数组的函数
-    
+    //给定维度信息
+    npy_intp alignment_matrix_dims[2]={alignment_rows,alignment_cols};
+    npy_intp traceback_matrix_row_dims[2]={traceback_mr_rows,traceback_mr_cols};
+    npy_intp traceback_matrix_col_dims[2]={traceback_mc_rows,traceback_mc_cols};
+    PyObject* PyArray_alignment=PyArray_SimpleNewFromData(2,alignment_matrix_dims,NPY_DOUBLE,alignment_matrix_data);
+    PyObject* PyArray_traceback_row=PyArray_SimpleNewFromData(2,traceback_matrix_row_dims,NPY_UINT,traceback_matrix_rows_data);
+    PyObject* PyArray_traceback_col=PyArray_SimpleNewFromData(2,traceback_matrix_col_dims,NPY_UINT,traceback_matrix_cols_data);
+
+    //定义与python函数参数个数一直的pytuple对象
+    PyObject* ArgArray =PyTuple_New(3);
+    PyTuple_SetItem(ArgArray,0,PyArray_alignment);
+    PyTuple_SetItem(ArgArray,1,PyArray_traceback_row);
+    PyTuple_SetItem(ArgArray,2,PyArray_traceback_col);
+
+    PyObject* pPythonFunc=PyObject_GetAttrString(pModule,"parse_cpp_return_data");
+    PyObject_CallObject(pPythonFunc,ArgArray);
+    cout<<"最后python打印"<<endl;
+
     time(&end);
     cout<<"计算总耗时："<<double(end-start)<<"s"<<endl;
+
+    //释放内存
+    // Py_DECREF(pPythonFunc);
+    // Py_DECREF(pModule);
+    // Py_DECREF(pFunct);
+    // Py_DECREF(ArgArray);
+    return;
+
 }
 
 
 int main(){
-    parase_python_data();
+    //parase_python_data();
     time_t start;
     time(&start);
     parse_python_viterbi_data_opration();
