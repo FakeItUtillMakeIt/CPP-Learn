@@ -1,0 +1,24 @@
+﻿生成启动时间为 2021/3/15 18:06:11。
+     1>项目“D:\code\Ccode\levelfinding\levelfinding\levelfinding\levelfinding.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         E:\installedApp\VS2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\logp_levelfinder.c
+         logp_levelfinder.c
+     1>d:\code\ccode\levelfinding\test_file_struct.h(15): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\installedapp\vs2013\vc\include\stdio.h(211) : 参见“fopen”的声明
+     1>d:\code\ccode\levelfinding\test_file_struct.h(41): warning C4133: “return”: 从“double [2400]”到“int *”的类型不兼容
+     1>d:\code\ccode\levelfinding\test_file_struct.h(41): warning C4172: 返回局部变量或临时变量的地址
+     1>d:\code\ccode\levelfinding\logp_levelfinder.c(61): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>d:\code\ccode\levelfinding\logp_levelfinder.c(65): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>d:\code\ccode\levelfinding\logp_levelfinder.c(112): warning C4133: “=”: 从“int *”到“double *”的类型不兼容
+     1>d:\code\ccode\levelfinding\logp_levelfinder.c(119): error C2065: “fid”: 未声明的标识符
+     1>d:\code\ccode\levelfinding\logp_levelfinder.c(119): warning C4047: “函数”:“FILE *”与“int”的间接级别不同
+     1>d:\code\ccode\levelfinding\logp_levelfinder.c(119): warning C4024: “fclose”: 形参和实参 1 的类型不同
+     1>d:\code\ccode\levelfinding\logp_levelfinder.c(438): warning C4047: “函数”:“const char *”与“int”的间接级别不同
+     1>d:\code\ccode\levelfinding\logp_levelfinder.c(438): warning C4024: “strlen”: 形参和实参 1 的类型不同
+     1>d:\code\ccode\levelfinding\logp_levelfinder.c(542): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+     1>d:\code\ccode\levelfinding\logp_levelfinder.c(623): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+     1>已完成生成项目“D:\code\Ccode\levelfinding\levelfinding\levelfinding\levelfinding.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:00.95
