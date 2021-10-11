@@ -4,5 +4,5 @@ exp. const int& i=1;int a=2;decltype(i) b=2;//b是const int&类型
 2.左值右值：
 
 3.列表初始化：
-exp. int[5] a：1,2,3,4,5;
+exp. int[5] a（1,2,3,4,5）;
 4.
